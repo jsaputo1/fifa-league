@@ -1,0 +1,304 @@
+/*
+Theme Name: FIFA League
+Author: John Saputo
+Description: A theme for an online FIFA league
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fifa
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Header */
+header {
+  background-color: #1e1f21;
+  margin: 0 auto; }
+  header figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  header img {
+    height: 50px; }
+  header ul {
+    font-weight: 700;
+    color: rgba(249, 249, 249, 0.65);
+    letter-spacing: 1.5px;
+    line-height: 1.38;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 15px;
+    padding-bottom: 10px; }
+  header li {
+    display: inline;
+    padding-bottom: 5px;
+    cursor: pointer; }
+  header a {
+    color: rgba(249, 249, 249, 0.65);
+    text-decoration: none; }
+    header a:visited {
+      color: rgba(249, 249, 249, 0.65); }
+
+.dash {
+  opacity: 0.5; }
+
+#on-page {
+  color: #f9f9f9;
+  border-bottom: 3px solid #0078fd; }
+  #on-page a {
+    color: #f9f9f9; }
+    #on-page a:visited {
+      color: #f9f9f9; }
+
+/* footer */
+footer {
+  background-color: #1e1f21;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+footer p {
+  color: #7b7b7c;
+  font-size: 13px;
+  padding: 20px 0px; }
+
+/* Group A Table */
+.center-text {
+  font-size: 18px;
+  padding-top: 25px;
+  padding-left: 25px;
+  text-align: left;
+  font-weight: 700; }
+
+.group-standings {
+  font-size: 14px;
+  font-weight: 400; }
+  .group-standings a {
+    color: #f9f9f9;
+    text-decoration: none; }
+    .group-standings a:visited {
+      color: #f9f9f9; }
+
+#groups {
+  width: 100%;
+  padding: 10px 10px;
+  border-top: 1px solid rgba(249, 249, 249, 0.25); }
+
+#groups-b {
+  width: 100%;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(249, 249, 249, 0.25); }
+
+th {
+  padding: 10px 0; }
+
+tr {
+  background-color: #1e1f21;
+  border-bottom: 1px solid rgba(249, 249, 249, 0.25); }
+
+.group-name {
+  background-color: #1e1f21;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 0;
+  font-size: 14px; }
+
+td {
+  background-color: #000000;
+  padding: 15px 20px; }
+
+.team-name {
+  text-align: left;
+  /* display: flex;
+    justify-content: flex-start; */ }
+  .team-name img {
+    width: 16px;
+    height: 16px;
+    padding-right: 10px; }
+
+.fixture-page {
+  font-size: 14px; }
+  .fixture-page hr {
+    opacity: 0.15;
+    color: #f9f9f9;
+    margin-top: 0px; }
+
+.fixture-menu2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: 5px;
+  max-width: 414px;
+  border-bottom: 1px solid grey;
+  -webkit-animation: fadein 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 0.5s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+
+/* Opera < 12.1 */
+
+.fixture-menu {
+  background-color: #1e1f21;
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer; }
+  .fixture-menu ul {
+    font-weight: 400;
+    color: rgba(249, 249, 249, 0.65);
+    letter-spacing: 1.5px;
+    line-height: 1.38;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 75px; }
+  .fixture-menu li {
+    display: inline; }
+  .fixture-menu a {
+    color: rgba(249, 249, 249, 0.65);
+    text-decoration: none; }
+    .fixture-menu a:visited {
+      color: rgba(249, 249, 249, 0.65); }
+
+#selectedGroup {
+  color: #f9f9f9;
+  border-bottom: 3px solid #0078fd; }
+
+.group-b-fixtures {
+  display: none; }
+
+.matchup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  padding: 8px 0; }
+  .matchup p {
+    padding: 3px 0; }
+
+#pending {
+  width: 75%; }
+
+.teams {
+  width: 50%; }
+
+.team-name1-fixtures {
+  text-align: left;
+  /* display: flex;
+      justify-content: flex-start; */ }
+  .team-name1-fixtures img {
+    width: 16px;
+    height: 16px;
+    padding-right: 10px; }
+  .team-name1-fixtures a {
+    color: #f9f9f9;
+    text-decoration: none; }
+    .team-name1-fixtures a:visited {
+      color: #f9f9f9; }
+
+#loser {
+  opacity: 0.65; }
+
+body {
+  color: #f9f9f9;
+  background-color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  max-width: 414px;
+  margin: 0 auto; }
