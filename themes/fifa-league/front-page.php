@@ -17,16 +17,31 @@
                     <th>GD</th>
                 </tr>
             </thead>
+      
             <?php
                 $args = array( 
                 'post_type' => 'post', 
-                'orderby'  => '_fifa_w',
-                'meta_key' => '_fifa_w',
                 'cat' => '4',
-                'numberposts' => 12
+                'numberposts' => 12,
+                'meta_query'    => array( 
+                    'relation' => 'AND',
+                    '_fifa_w' => array(
+                        'key'       => '_fifa_w',
+                    ),
+                    '_fifa_d' => array(
+                        'key'       => '_fifa_d',
+                    ),
+                ),
+                
+            'orderby' => array(
+                '_fifa_w'       => 'DESC',
+                '_fifa_d'     => 'DESC'
+                )
                 );
                 $product_posts = get_posts( $args ); // returns an array of posts
             ?>
+
+
             <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 
             <tbody>
@@ -72,11 +87,23 @@
             <?php
                 $args = array( 
                 'post_type' => 'post', 
-                'orderby'  => '_fifa_w',
-                'meta_key' => '_fifa_w',
                 'cat' => '5',
-                'numberposts' => 12
-                );
+                'numberposts' => 12,
+                'meta_query'    => array( 
+                    'relation' => 'AND',
+                    '_fifa_w' => array(
+                        'key'       => '_fifa_w',
+                    ),
+                    '_fifa_d' => array(
+                        'key'       => '_fifa_d',
+                    ),
+                ),
+                
+            'orderby' => array(
+                '_fifa_w'       => 'DESC',
+                '_fifa_d'     => 'DESC'
+                )
+            );
                 $product_posts = get_posts( $args ); // returns an array of posts
             ?>
             <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
@@ -85,6 +112,7 @@
                 <tr>
                     <td class="team-name"><?php the_post_thumbnail() ?><?php the_title()?></a></td>
                     <td>
+                    
                     <?php echo
                     (get_post_meta( get_the_ID(), '_fifa_w', true )+get_post_meta( get_the_ID(), '_fifa_d', true )+get_post_meta( get_the_ID(), '_fifa_l', true ));?>
                     </td>
@@ -101,6 +129,9 @@
                         <?php echo (get_post_meta( get_the_ID(), '_fifa_gf', true )-get_post_meta(get_the_ID(), '_fifa_ga', true));?>
                     </td>
                     <!-- GD -->
+
+                    
+
                     <!-- Loop ends -->
                     <?php endforeach;?>
                 </tr>
