@@ -31,13 +31,15 @@
                     '_fifa_d' => array(
                         'key'       => '_fifa_d',
                     ),
+                    '_fifa_gf' => array(
+                        'key'       => '_fifa_gf',
+                    ),
+                    '_fifa_ga' => array(
+                        'key'       => '_fifa_ga',
+                    ),
                 ),
-                
-            'orderby' => array(
-                '_fifa_w'       => 'DESC',
-                '_fifa_d'     => 'DESC'
-                )
-                );
+            'orderby' => '_fifa_w _fifa_d _fifa_gf-_fifa_ga', 'order' => 'DESC'
+            );
                 $product_posts = get_posts( $args ); // returns an array of posts
             ?>
 
@@ -97,14 +99,16 @@
                     '_fifa_d' => array(
                         'key'       => '_fifa_d',
                     ),
+                    '_fifa_gf' => array(
+                        'key'       => '_fifa_gf',
+                    ),
+                    '_fifa_ga' => array(
+                        'key'       => '_fifa_ga',
+                    ),
                 ),
-                
-            'orderby' => array(
-                '_fifa_w'       => 'DESC',
-                '_fifa_d'     => 'DESC'
-                )
+            'orderby' => '_fifa_w _fifa_d _fifa_gf-_fifa_ga', 'order' => 'DESC'
             );
-                $product_posts = get_posts( $args ); // returns an array of posts
+                $product_posts = get_posts( $args );
             ?>
             <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 
