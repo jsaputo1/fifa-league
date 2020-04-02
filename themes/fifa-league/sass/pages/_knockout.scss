@@ -1,0 +1,67 @@
+.knockout-stage {
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+}
+
+#knockout-header {
+  font-size: 18px;
+  padding: 25px 25px;
+  text-align: left;
+  font-weight: 700;
+}
+
+#game-number {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 0px 10px 15px;
+  font-size: 12px;
+}
+
+.matchup-1-knockout {
+  padding: 10px 25px 10px 25px;
+  background-color: $darkGrey;
+  margin-bottom: 10px;
+}
+
+.top-knockout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-knockout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.knockout-team-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 100px;
+
+  p {
+    padding-top: 5px;
+  }
+}
