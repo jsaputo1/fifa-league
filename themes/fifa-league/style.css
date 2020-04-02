@@ -295,6 +295,139 @@ td {
 #loser {
   opacity: 0.65; }
 
+.highlights-page {
+  width: 100%; }
+  .highlights-page hr {
+    padding-bottom: 200px; }
+
+.highlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1e1f21; }
+
+.content figcaption {
+  text-align: center; }
+
+.final-score-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 414px;
+  text-align: center; }
+
+.teams-highlights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 414px; }
+  .teams-highlights img {
+    width: 16px;
+    height: 16px; }
+
+.highlights-score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 10px; }
+
+.knockout-stage img {
+  height: 40px;
+  width: 40px; }
+
+.knockout-stage h2 {
+  font-size: 2em; }
+
+.knockout-stage h3 {
+  font-size: 1.5em; }
+
+.knockout-stage p {
+  font-size: 12px;
+  opacity: 0.5; }
+
+#knockout-header {
+  font-size: 18px;
+  padding: 25px 25px;
+  text-align: left;
+  font-weight: 700; }
+
+#game-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0px 0px 10px 15px;
+  font-size: 12px; }
+
+.matchup-1-knockout {
+  padding: 10px 25px 10px 25px;
+  background-color: #1e1f21;
+  margin-bottom: 10px; }
+
+.top-knockout {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.bottom-knockout {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 15px; }
+
+.knockout-team-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 100px; }
+  .knockout-team-text p {
+    padding-top: 5px; }
+
 body {
   color: #f9f9f9;
   background-color: #000000;

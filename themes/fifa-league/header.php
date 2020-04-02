@@ -10,13 +10,15 @@
     <header>
       <figure><img src="<?php echo get_template_directory_uri() . '/images/theleague-logo.png' ;?>"></figure>
       <ul>
-        <li class="groups-menu" id="on-page">Groups</li></a>
+        <li class="knockout-menu" id="on-page">Knockout</li>
+        <li class="dash">|</li>
 
+        <li class="groups-menu">Groups</li></a>
 
         <li class="dash">|</li>
-        <li class="fixtures-menu">Fixtures</li></a>
+        <li class="fixtures-menu">Fixtures</li>
         <li class="dash">|</li>
-        <a href="#"><li class=
+        <li class=
         "<?php echo is_page(array('highlights')) ? 'on-page' : '' ;?>">Highlights</li></a>
       </ul>
     </header>

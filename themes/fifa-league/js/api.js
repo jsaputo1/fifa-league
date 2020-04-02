@@ -1,6 +1,7 @@
 (function($) {
   console.log('main 1 working');
 
+  $('.standings').hide();
   $('.fixture-page').hide();
 
   $('select').on('change', function(e) {
@@ -106,23 +107,45 @@
 
   $('.fixtures-menu').on('click', function(event) {
     $('.standings').hide();
+    $('.knockout-stage').hide();
     $('.fixture-page').show();
 
     $('.menu-click-a').attr('id', 'selectedGroup');
     $('.menu-click-b').attr('id', '');
     $('.groups-menu').attr('id', '');
+    $('.knockout-menu').attr('id', '');
     $('.fixtures-menu').attr('id', 'on-page');
   });
 
   $('.groups-menu').on('click', function(event) {
     $('.fixture-page').hide();
+    $('.knockout-stage').hide();
     $('.standings').show();
 
     $('.menu-click-a').attr('id', 'selectedGroup');
     $('.menu-click-b').attr('id', '');
     $('.groups-menu').attr('id', 'on-page');
     $('.fixtures-menu').attr('id', '');
+    $('.knockout-menu').attr('id', '');
   });
+
+  $('.knockout-menu').on('click', function(event) {
+    $('.standings').hide();
+    $('.fixture-page').hide();
+    $('.knockout-stage').show();
+
+    $('.menu-click-a').attr('id', 'selectedGroup');
+    $('.menu-click-b').attr('id', '');
+    $('.groups-menu').attr('id', '');
+    $('.fixtures-menu').attr('id', '');
+    $('.knockout-menu').attr('id', 'on-page');
+  });
+
+  // $('.highlights-menu').on('click', function(event) {
+  //   $('.groups-menu').attr('id', '');
+  //   $('.fixtures-menu').attr('id', '');
+  //   $('.highlights-menu').attr('id', 'on-page');
+  // });
 
   $(window).on('scroll', function() {
     if (window.pageYOffset > 100) {
